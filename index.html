@@ -225,6 +225,14 @@
                     <a class = "carousel-control-next" href = "#mycarousel" role = "button" data-slide = "next">
                         <span class = "carousel-control-next-icon"></span>
                     </a>
+                    <div class = "btn-group" id = "carouselButton">
+                        <button class = "btn btn-danger btn-sm" id = "carouselPause">
+                            <span class = "fa fa-pause"></span>
+                        </button>
+                        <button class = "btn btn-danger btn-sm" id = "carouselPlay">
+                            <span class = "fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -279,7 +287,7 @@
 
         <a id = "form_id"></a>
         
-        <div class = "row row-content align-items-center">
+        <!-- <div class = "row row-content align-items-center">
             <div class = "col-12 col-sm-8 offset-sm-2">
                 <h3 class = "card-header bg-warning text-white">Reserve a Table</h3>
                 <div class = "card-body">
@@ -339,7 +347,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <footer class = "footer">
@@ -398,6 +406,17 @@
             $('[name="options"]').toggle();
         });
     </script> -->
+    <script>
+        $(document).ready(function(){
+            $('#mycarousel').carousel({interval : 2000});
+            $('#carouselPause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carouselPlay').click(function(){
+                $('#mycarousel').carousel('cycle');
+            });
+        });
+    </script>
 </body>
 
 </html>
