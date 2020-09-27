@@ -12,9 +12,6 @@ $(document).ready(function(){
         }
         
     });
-    // $('#carouselPlay').click(function(){
-    //     $('#mycarousel').carousel('cycle');
-    // });
     $('#reserveModalButton').click(function(){
         $('#reserveModal').modal('toggle');
     });
